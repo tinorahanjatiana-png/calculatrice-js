@@ -1,0 +1,62 @@
+body {
+    display: -webkit-flex;
+    justify-content: center; /*toerana misy ilay calculatrice izay eo afovoany "par rappport au largeur"*/
+    align-items: center;/*toerana misy ilay calculatrice izay eo afovoany "par rappport au hauteur"*/
+    height: 100vh;
+    background-color: #d5e0e0; /*lokony manodidina*/
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+}
+
+.calculator { /* ilay vatan'ilay calculatrice iray manotolo*/
+    background-color: #b9ecc2; /*lokony*/
+    padding: 20px; /*habehan'ilay "calculatrice"*/
+    border-radius: 50px; /* manome endrika somary boribory ny zorony*/
+    box-shadow: 10px 40px 205px rgba(200,0, 3, 0.3); /* loko mapiaingo azy manaraka ny "bordure"sy manodidina azy*/
+    width: 500px;/* ny habehan'ny sakany*/
+}
+.calculator-title { /*lohateny*/
+    color: rgb(14, 12, 12);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font: 'Verdana';
+}
+#display { /* efijery*/
+    width: 100%;/* habehan'ny sakany "horizontal"*/
+    height: 150px;/* habehan'ny halavany manaraka ny "vertical"*/
+    background-color: #f7f4f4; /*lokony */
+    border: none;
+    color: #0d0e0d; /* lokon'ny soratra miseho*/
+    text-align: right; /* ny fipoitrany soratra: "à droite vers gauche"*/
+    font-size: 2.5rem;/* habehany soratra(chiffre) */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px; /*fanomezana endrika somary boribory ny zorony*/
+    margin-bottom: 20px; /* elenalana manasaraka azy amin' ny bokotra*/
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4,115px);
+    gap: 10px;
+}
+
+.btn { /*bokotra isa :{0,...,9}*/
+    padding: 30px; /* halavany*/
+    font-size: 1.5rem; /* habehany soratra(chiffre) */
+    border: none;
+    border-radius: 20px;  /*fanomezana endrika somary boribory ny zorony*/
+    cursor: pointer;
+    background-color: #c58da9; /*lokony */
+    transition: background 0.2s;
+}
+
+.operator { background-color: #ff9500; color: rgb(40, 13, 13); font-size: 1.5rem; } /*lokon'ny "signe d'operartion"*/
+
+.sci { background-color: #09021a; color: white; font-size: 2rem; } /* loko sy halebehan'ireo bokotra siantifika*/
+
+.clear { background-color: #ff3b30; color: white; font-size: 1.5rem } /*loko sy habehan'ny bokotra 'ESC' sy 'DEL'*/
+
+.equal { background-color: #34c759; color: rgb(40, 13, 13); grid-column: span 1;font-size: 1.5rem } /*loko sy habehan'ny bokotra '='*/

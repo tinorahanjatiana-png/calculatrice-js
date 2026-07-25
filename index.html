@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> <!--ito no ahafahana mapiseho ara-dalàna ireo "caractères speciaux" toy ny é,√,...-->
+    <meta name="viewport" content5="width=device-width, initial-scale=1.0"> <!--mapifanaraka ny habeany amin'ny "ordinateur" na "téléphone" apiasaina-->
+    <title>Calculatrice Scientifique by Tino</title> <!--titre hita eo amin'ny "onglet"-->
+
+     <link rel="stylesheet" href="style.css">   <!-- fampifandraisana amin'ny css (loko sy endrika)-->
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="calculator-title">SCIENTIFIC CALCULATOR</div>
+        <input type="text" id="display" readonly> <!--efijery na "écran" fampisehoana
+         //type="text" dia midika oe saha fasina "texte"
+         //id="display" dia famatarana manokana hahafahan'ny "js" mamatatra azy
+         //readonly dia midika oe tsy afaka manoratra mivantana eo amin'ny efijery ny "utilisateur" fa tsy maintsy manindry bokotra-->
+       
+        <div class="buttons"> <!--famoronana ireo bokotra fiasa ho toy ny "tableau"
+            //class="action" ito dia afahan'ny css mamatatra sy mandoko azy mifanaraka ny loko nomeny
+            //onclick="clearDisplay()" ito dia afahan'ny javascript manao ny asa mifanaraka aminy "clearDisplay()" izay mamafa ny "text" rehetra miseho ra manindry ny bokotra ESC -->
+            
+            <button class="btn clear" onclick="clearDisplay()">ESC</button> <!-- mamafa ny "texte" rehetra eo amin'ny efijery-->
+            <button class="btn clear" onclick="deleteLast()">DEL</button> <!-- mamafa izay farany niseho ihany-->
+            <button class="btn sci" onclick="pushOp('√')">√</button>
+            <button class="btn sci" onclick="pushOp(')')">)</button>
+            
+
+            <!--famoronana ireo bokotra siantifika (Sin, Cos, Tan, sns.) -->
+            <button class="btn sci" onclick="pushOp('sin(')">sin</button>
+            <button class="btn sci" onclick="pushOp('cos(')">cos</button>
+            <button class="btn sci" onclick="pushOp('tan(')">tan</button>
+            <button class="btn sci" onclick="pushOp('(')">(</button>
+
+            <!-- Isa sy Operatera -->
+            <button class="btn" onclick="press('7')">7</button>
+            <button class="btn" onclick="press('8')">8</button>
+            <button class="btn" onclick="press('9')">9</button>
+            <button class="btn operator" onclick="press('-')">-</button>
+
+            <button class="btn" onclick="press('4')">4</button>
+            <button class="btn" onclick="press('5')">5</button>
+            <button class="btn" onclick="press('6')">6</button>
+            <button class="btn operator" onclick="press('+')">+</button>
+
+            <button class="btn" onclick="press('1')">1</button>
+            <button class="btn" onclick="press('2')">2</button>
+            <button class="btn" onclick="press('3')">3</button>
+            <button class="btn operator" onclick="press('*')">*</button>
+
+            <button class="btn" onclick="press('0')">0</button>
+            <button class="btn" onclick="press('.')">.</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="press('/')">/</button> 
+            
+        </div>
+    </div>
+
+    <!-- fampifandraisana amin'ny js -->
+    <script src="script.js"></script>
+</body>
+</html>
